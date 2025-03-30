@@ -28,7 +28,10 @@ jobs:
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          # You may need to use a PAT with write:packages scope instead of GITHUB_TOKEN
+          # Create a repository secret called CR_PAT and uncomment the line below
+          password: ${{ secrets.CR_PAT }}
+          # password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Extract metadata for Docker
         id: meta
