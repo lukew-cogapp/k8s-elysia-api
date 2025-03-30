@@ -1,0 +1,13 @@
+image:
+  repository: elysia-api
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  port: 3000
+
+ingress:
+  enabled: true
+  className: "nginx"
+  host: elysia-api.localhost
+  path: /

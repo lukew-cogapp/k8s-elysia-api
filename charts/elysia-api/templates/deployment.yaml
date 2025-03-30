@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: { { include "elysia-api.fullname" . } }
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: { { include "elysia-api.name" . } }
+  template:
+    metadata:
+      labels:
+        app: { { include "elysia-api.name" . } }
+    spec:
+      containers:
+        - name: elysia
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports:
+            - containerPort: { { .Values.service.port } }

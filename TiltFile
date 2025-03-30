@@ -1,0 +1,3 @@
+docker_build('elysia-api', '.')
+k8s_yaml(helm_template('elysia-api', 'charts/elysia-api', values='charts/elysia-api/values.yaml'))
+k8s_resource('elysia-api', port_forwards=3000)
