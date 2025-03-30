@@ -2,7 +2,7 @@
 # This is a YAML-formatted file.
 
 image:
-  repository: elysia-api
+  repository: ghcr.io/lukew-cogapp/elysia-api
   tag: latest
   pullPolicy: IfNotPresent
 
