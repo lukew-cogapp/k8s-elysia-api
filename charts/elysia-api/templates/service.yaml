@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: { { include "elysia-api.fullname" . } }
 spec:
+  type: { { .Values.service.type } }
   selector:
     app: { { include "elysia-api.name" . } }
   ports:
