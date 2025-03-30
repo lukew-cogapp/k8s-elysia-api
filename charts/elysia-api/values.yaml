@@ -1,9 +1,6 @@
 # Default values for elysia-api
 # This is a YAML-formatted file.
 
-nameOverride: ""
-fullnameOverride: ""
-
 image:
   repository: elysia-api
   tag: latest
