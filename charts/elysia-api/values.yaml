@@ -3,8 +3,8 @@
 
 image:
   repository: ghcr.io/lukew-cogapp/elysia-api
-  tag: latest
-  pullPolicy: IfNotPresent
+  tag: main
+  pullPolicy: Always
 imagePullSecrets:
   - name: ghcr-creds
 
