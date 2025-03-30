@@ -5,6 +5,8 @@ image:
   repository: ghcr.io/lukew-cogapp/elysia-api
   tag: latest
   pullPolicy: IfNotPresent
+imagePullSecrets:
+  - name: ghcr-creds
 
 resources:
   limits:
